@@ -32,10 +32,17 @@ export class AcessoComponent implements OnInit {
 
 
   public estadoCriado: string = 'criado';
+  public cadastro: boolean = false
 
 
   ngOnInit(): void {
   }
 
-
+  public exibirpainel(event: string): void {
+    if (event === 'cadastro') {
+      this.cadastro = true
+    } else {
+      this.cadastro = false
+    }
+  }
 }
